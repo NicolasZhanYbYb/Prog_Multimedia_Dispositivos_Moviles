@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation = "vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/txt_Book_Name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/book_name"
+        android:textAlignment="center"
+        style="@style/NameStyle" />
+
+    <EditText
+        android:id="@+id/et_opinion"
+        style="@style/NameStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint=" @string/introduzca_opinion"
+        android:inputType="text"
+        android:text="Name"
+        android:textAlignment="center" />
+
+    <Button
+        android:id="@+id/bt_hecho"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/hecho" />
+
+    <TextView
+        android:id="@+id/txt_opinion"
+        style="@style/NameStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/green"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:visibility="gone" />
+
+    <ScrollView
+        android:id="@+id/text_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/star_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@android:drawable/btn_star_big_on" />
+
+            <TextView
+                android:id="@+id/book_text"
+                style="@style/NameStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lineSpacingMultiplier="1.2"
+                android:padding="15dp"
+                android:text="@string/book_text" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
