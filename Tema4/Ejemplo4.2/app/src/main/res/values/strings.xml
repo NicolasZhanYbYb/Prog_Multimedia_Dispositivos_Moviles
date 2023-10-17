@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Ejemplo4.2</string>
+    <string name="myButton">BOTÓN</string>
+    <string name="myCheckBox">Check Box</string>
+    <string name="myRadioButton1">Radio 1</string>
+    <string name="myRadioButton2">Radio 2</string>
+    <string name="myToggleButton">BOTÓN</string>
+    <string name="mySwitch">Switch</string>
+    <string name="mostrar">Mostrar</string>
+</resources>

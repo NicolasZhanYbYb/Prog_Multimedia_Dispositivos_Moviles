@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioButton
+            android:id="@+id/rbPresencial"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
+            android:text="@string/presencial" />
+
+        <RadioButton
+            android:id="@+id/rbSemipresencial"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/semipresencial" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/nombre"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+    <TextView
+        android:id="@+id/tvFechNac"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/fecha_nac"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvName" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:orientation="horizontal"
+        android:paddingLeft="16dp"
+        android:paddingRight="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etMes">
+
+        <RadioButton
+            android:id="@+id/rbASIR"
+            android:layout_width="74dp"
+            android:layout_height="wrap_content"
+            android:text="@string/asir" />
+
+        <RadioButton
+            android:id="@+id/rbDAW"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="56dp"
+            android:layout_marginRight="56dp"
+            android:text="@string/daw" />
+
+        <RadioButton
+            android:id="@+id/rbDAM"
+            android:layout_width="69dp"
+            android:layout_height="wrap_content"
+            android:text="@string/dam" />
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/etIntroducirNom"
+        android:layout_width="300dp"
+        android:layout_height="45dp"
+        android:ems="10"
+        android:hint="@string/enter_name"
+        android:inputType="text"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvName" />
+
+    <EditText
+        android:id="@+id/etDia"
+        android:layout_width="56dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="64dp"
+        android:ems="10"
+        android:hint="@string/dia"
+        android:inputType="text"
+        android:textAlignment="center"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvFechNac"
+        app:layout_constraintStart_toEndOf="@+id/tvFechNac" />
+
+    <EditText
+        android:id="@+id/etMes"
+        android:layout_width="56dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="32dp"
+        android:ems="10"
+        android:hint="@string/mes"
+        android:inputType="text"
+        android:textAlignment="center"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvFechNac"
+        app:layout_constraintStart_toEndOf="@+id/etDia" />
+
+    <EditText
+        android:id="@+id/etAnyo"
+        android:layout_width="56dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="32dp"
+        android:ems="10"
+        android:hint="@string/anyo"
+        android:inputType="text"
+        android:textAlignment="center"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvFechNac"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/etMes" />
+
+    <Button
+        android:id="@+id/buttonObtDatos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/obtener_datos"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup2" />
+
+    <TextView
+        android:id="@+id/txtDatos"
+        android:layout_width="405dp"
+        android:layout_height="350dp"
+        android:layout_marginTop="24dp"
+        android:background="#D3D1D1"
+        android:paddingTop="80dp"
+        android:textAlignment="center"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonObtDatos" />
+
+    <TextView
+        android:id="@+id/txtName"
+        android:layout_width="405dp"
+        android:layout_height="40dp"
+        android:fontFamily="sans-serif"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textSize="34sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtDatos" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
