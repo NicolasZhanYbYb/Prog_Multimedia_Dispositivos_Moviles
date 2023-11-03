@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Practica2</string>
+    <string name="enter_name">Enter the student is name</string>
+    <string name="dia">Día</string>
+    <string name="mes">Mes</string>
+    <string name="anyo">Año</string>
+    <string name="dam">DAM</string>
+    <string name="daw">DAW</string>
+    <string name="asir">ASIR</string>
+    <string name="fecha_nac">Date of birth:</string>
+    <string name="nombre">Name</string>
+    <string name="semipresencial">Semipresencial</string>
+    <string name="presencial">Presencial</string>
+    <string name="obtener_datos">Get Age and Group</string>
+    <string name="leer_datos">Read Data</string>
+    <string name="guardar_en_historico">Save to History</string>
+    <string name="ver_historico">Show History</string>
+    <string name="aceptar">Accept</string>
+    <string name="cancelar">Cancel</string>
+    <string name="error_textos">Hay algún dato que no está introducido</string>
+    <string name="filename">students.txt</string>
+    <string name="no_existe_fichero">no existe el fichero</string>
+</resources>

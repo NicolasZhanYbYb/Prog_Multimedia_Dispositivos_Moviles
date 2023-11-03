@@ -7,18 +7,19 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.nizhvi.ejemplo45.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
-    private lateinit var binding: ActivityMainBinding
     private lateinit var myAdapter: DiscoAdapter
-
+    private lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
+        // Estas dos líneas sustituyen a
+        setContentView(R.layout.activity_main)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
-        setUpRecyclerView();
+        setUpRecyclerView()
     }
-
+    /**
+     * Método encargado de configurar el RV.
+     */
     private fun setUpRecyclerView() {
         // Esta opción a TRUE significa que el RV tendrá
         // hijos del mismo tamaño, optimiza su creación.
@@ -29,17 +30,21 @@ class MainActivity : AppCompatActivity() {
         myAdapter = DiscoAdapter(getDiscos(), this)
         // Se asigna el adapter al RV.
         binding.myRVDiscos.adapter = myAdapter
-
     }
-
+    /**
+     * Método encargado de generar la fuente de datos.
+     */
     private fun getDiscos(): MutableList<MyDisco> {
         val discos: MutableList<MyDisco> = arrayListOf()
         discos.add(MyDisco("Abbey Road", "The Beatles", R.mipmap.abbey))
-        discos.add(MyDisco("Born to Run", "Bruce Springsteen", R.mipmap.born))
-        discos.add(MyDisco("Exile on main st.", "The Rolling Stones", R.mipmap.exile))
+        discos.add(MyDisco("Born to Run", "Bruce Springsteen",
+            R.mipmap.born))
+        discos.add(MyDisco("Exile on main st.", "The Rolling Stones",
+            R.mipmap.exile))
         discos.add(MyDisco("Ten", "Pearl Jam", R.mipmap.ten))
         discos.add(MyDisco("Nocturnal", "Amaral", R.mipmap.nocturnal))
-        discos.add(MyDisco("Daiquiri Blues", "Quique González", R.mipmap.daiquiri))
+        discos.add(MyDisco("Daiquiri Blues", "Quique González",
+            R.mipmap.daiquiri))
         discos.add(MyDisco("White Album", "The Beatles", R.mipmap.white))
         discos.add(MyDisco("24 Nights", "Eric Clapton", R.mipmap.nights))
         discos.add(MyDisco("Shake your moneymaker", "The Black Crowes",
