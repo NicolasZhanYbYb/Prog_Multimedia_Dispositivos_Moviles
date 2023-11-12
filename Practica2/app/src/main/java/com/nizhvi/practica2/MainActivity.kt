@@ -97,7 +97,7 @@ class MainActivity : AppCompatActivity() {
         val inputMethodManager = getSystemService(INPUT_METHOD_SERVICE)
                 as InputMethodManager
         inputMethodManager.hideSoftInputFromWindow(view.windowToken, 0)
-
+ 
         val myIntent = Intent(this, StudentsListActivity::class.java).apply { }
 
         getResult.launch(myIntent)
