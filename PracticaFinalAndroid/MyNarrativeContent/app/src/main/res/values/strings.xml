@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">MyNarrativeContent</string>
+    <string name="usuario">Usuario:</string>
+    <string name="contrasenya">Contraseña:</string>
+    <string name="introduce_la_contrasenya">Introduce la contraseña</string>
+    <string name="introduce_el_usuario">Introduce el usuario</string>
+    <string name="sing_in">Sing in</string>
+    <string name="no_tienes_una_cuenta_a_n">¿No tienes una cuenta aún?</string>
+    <string name="registrarse">Registrarse</string>
+    <string name="campos_sin_datos">Debes iniciar sesión con un usuario y contraseña adecuados.</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
