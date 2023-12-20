@@ -13,10 +13,7 @@
         android:theme="@style/Theme.MyNarrativeContent"
         tools:targetApi="31">
         <activity
-            android:name=".StudentActivity"
-            android:exported="false" />
-        <activity
-            android:name=".LogInActivity"
+            android:name=".SingUpActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

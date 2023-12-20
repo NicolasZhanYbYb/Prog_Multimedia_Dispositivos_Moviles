@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
 import android.view.View
 import com.nzv.mynarrativecontent.databinding.ActivityStartBinding
 
@@ -32,7 +33,7 @@ class StartActivity : AppCompatActivity() {
 
     private fun actionsBtSingUp(it: View) {
         Utils.closeKeyboard(it, this)
-        val myIntent = Intent(this, LogInActivity::class.java)
+        val myIntent = Intent(this, SingUpActivity::class.java)
         startActivity(myIntent)
     }
 
@@ -50,6 +51,12 @@ class StartActivity : AppCompatActivity() {
             Utils.showSnackBar(getString(R.string.campos_sin_datos), view)
             return false
         }
+        return true
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        val inflate = menuInflater
+        inflate.inflate(R.menu.main_menu, menu)
         return true
     }
 }

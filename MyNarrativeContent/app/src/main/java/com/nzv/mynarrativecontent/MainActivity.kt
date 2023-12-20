@@ -1,6 +1,7 @@
 package com.nzv.mynarrativecontent
 
 import android.os.Bundle
+import android.view.Menu
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.tabs.TabLayoutMediator
 import com.nzv.mynarrativecontent.databinding.ActivityMainBinding
@@ -26,5 +27,11 @@ class MainActivity : AppCompatActivity() {
         TabLayoutMediator(binding.tabLayout, viewPager2){tab, position ->
             tab.text = adapter.getPageTitle(position)
         }.attach()
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        val inflate = menuInflater
+        inflate.inflate(R.menu.second_menu, menu)
+        return true
     }
 }
