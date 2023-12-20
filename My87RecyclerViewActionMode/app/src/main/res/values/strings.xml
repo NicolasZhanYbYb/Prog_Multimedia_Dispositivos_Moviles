@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">My45RecyclerView</string>
+
+    <string name="desc_image">Descripción Imagen</string>
+    <string name="titulo_text">Título</string>
+    <string name="autor_text">Autor</string>
+
+    <string name="menu_op_delete">Eliminar</string>
+    <string name="menu_op_share">Compartir</string>
+
+
+</resources>

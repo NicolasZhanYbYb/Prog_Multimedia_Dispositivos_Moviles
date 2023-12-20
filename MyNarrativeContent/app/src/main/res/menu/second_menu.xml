@@ -8,7 +8,7 @@
         android:title=""
         app:showAsAction="ifRoom" />
     <item
-        android:id="@+id/search"
+        android:id="@+id/searchItem"
         android:icon="@android:drawable/ic_menu_search"
         android:title=""
         app:showAsAction="ifRoom" />

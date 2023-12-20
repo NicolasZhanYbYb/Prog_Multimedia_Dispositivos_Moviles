@@ -4,28 +4,29 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.Menu
 import android.view.View
+import com.google.firebase.firestore.CollectionReference
+import com.google.firebase.firestore.FirebaseFirestore
 import com.nzv.mynarrativecontent.databinding.ActivityStartBinding
 
 class StartActivity : AppCompatActivity() {
     private lateinit var binding: ActivityStartBinding
+    private lateinit var db: FirebaseFirestore
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         binding = ActivityStartBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
+        //db = FirebaseFirestore.getInstance()
         startElements()
     }
     //Inicializa todas las funcionalidades de la activity a sus correspondiente funciones
     @SuppressLint("SetTextI18n")
     private fun startElements() {
-        val name = intent.getStringExtra(Utils.EXTRA_NAME)
         with (binding){
-            etPass.text.clear()
-            etEnterUser.text.clear()
             btSingUp.setOnClickListener { actionsBtSingUp(it) }
             btSingIn.setOnClickListener { actionsBtSingIn(it) }
         }
@@ -39,10 +40,20 @@ class StartActivity : AppCompatActivity() {
 
     private fun actionsBtSingIn(it: View) {
         Utils.closeKeyboard(it, this)
-        if (!checkCanAccept(it)) {
-            val myIntent = Intent(this, MainActivity::class.java)
+
+        val user = binding.etEnterUser.text.toString()
+        val pass = binding.etPass.text.toString()
+        val myIntent: Intent
+        if (user == "nicolas" && pass == "12345678") {
+            myIntent = Intent(this, MainActivity::class.java).apply {
+                putExtra(Utils.EXTRA_USER, user)
+            }
             startActivity(myIntent)
+            binding.etPass.text.clear()
+            binding.etEnterUser.text.clear()
         }
+        Utils.showSnackBar("El usuario y la contraseña no coinciden", it)
+
     }
 
     //Comprueba que todos los campos estén informados para poder aceptar

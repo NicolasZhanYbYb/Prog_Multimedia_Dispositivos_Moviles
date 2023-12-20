@@ -11,27 +11,31 @@
         android:id="@+id/tvRegistrarse"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="50dp"
         android:text="Introduzca los siguientes datos"
         android:textAlignment="center"
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:id="@+id/tvAvatarSU"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24sp"
-        android:layout_marginTop="50sp"
-        android:text="Avatar"
+        android:layout_marginTop="50dp"
+        android:text=" Avatar:"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etBirthDaySU" />
+        app:layout_constraintTop_toBottomOf="@+id/tvBirthDaySU" />
 
     <EditText
         android:id="@+id/etFullName"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
         android:ems="10"
         android:hint="Introduce tu nombre"
         android:inputType="text"
@@ -51,8 +55,10 @@
 
     <EditText
         android:id="@+id/etPassSU"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="16dp"
         android:ems="10"
         android:hint="@string/introduce_la_contrasenya"
         android:inputType="textPassword"
@@ -66,7 +72,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="50sp"
-        android:text="Nombre Completo"
+        android:text="Nombre Completo:"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvRegistrarse" />
 
@@ -76,7 +82,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="24sp"
         android:layout_marginTop="50sp"
-        android:text="Fecha de Nacimiento"
+        android:text="Fecha de Nacimiento:"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etUserSu" />
 
@@ -92,8 +98,10 @@
 
     <EditText
         android:id="@+id/etUserSu"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"
         android:ems="10"
         android:hint="@string/introduce_el_usuario"
         android:inputType="text"
@@ -102,19 +110,11 @@
         app:layout_constraintStart_toEndOf="@+id/tvUserSU" />
 
     <EditText
-        android:id="@+id/etBirthDaySU"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="text"
-        app:layout_constraintBaseline_toBaselineOf="@+id/tvBirthDaySU"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/tvBirthDaySU" />
-
-    <EditText
         android:id="@+id/etAvatarSU"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"
         android:ems="10"
         android:inputType="text"
         app:layout_constraintBaseline_toBaselineOf="@+id/tvAvatarSU"
@@ -130,4 +130,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etAvatarSU" />
+
+    <TextView
+        android:id="@+id/tvDatePicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" ? / ? / ?"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvBirthDaySU"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvBirthDaySU" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

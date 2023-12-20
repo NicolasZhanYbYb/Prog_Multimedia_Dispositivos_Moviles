@@ -4,14 +4,12 @@ import android.app.Activity
 import android.content.Context
 import android.view.View
 import android.view.inputmethod.InputMethodManager
-import android.widget.Toast
-import androidx.core.content.ContentProviderCompat.requireContext
 import com.google.android.material.snackbar.Snackbar
-import java.io.IOException
-import java.io.OutputStreamWriter
+import com.google.firebase.firestore.QuerySnapshot
 
 object Utils {
     const val TAG_APP = "myExplicitIntent"
+    const val EXTRA_USER = "myUser"
     const val EXTRA_NAME = "myName"
     const val EXTRA_MODALITY = "myModality"
     const val EXTRA_DAY = "myDay"
